@@ -18,6 +18,40 @@ library(rethinking)
 
 Do all the easy exercises from Chapter 9: **9E1** through **9E6**.
 
+#### 9E1. Which of the following is a requirement of the simple Metropolis algorithm?
+(1) The parameters must be discrete.
+(2) The likelihood function must be Gaussian.
+(3) The proposal distribution must be symmetric.
+
+3rd option it issss:
+"Provided the way we choose our proposed parameter values at each step is symmetric—so
+that there is an equal chance of proposing from A to B and from B to A—then the Metropolis
+algorithm will eventually give us a collection of samples from the joint posterior."
+
+
+#### 9E2. Gibbs sampling is more efficient than the Metropolis algorithm. How does it achieve this extra
+efficiency? Are there any limitations to the Gibbs sampling strategy?
+
+- Need fewer samples than in Metropolis Algorithm to get an equally good image of the posterior distribution
+- Limitations: Something about conjugate priors. When models become too complex they are both quite inefficient: for an example when two parameters are correlated it enters the problem of 'the two leg example'.
+
+
+#### 9E3. Which sort of parameters can Hamiltonian Monte Carlo not handle? Can you explain why?
+
+- Cannot handle parameters that are not continuous as it can't glide through discrete parameters. 
+- It needs a continuous space to move around in - Many smaller islands won't be good. 
+
+
+#### 9E4. Explain the difference between the effective number of samples, n_eff as calculated by Stan,
+and the actual number of samples.
+
+#### 9E5. Which value should Rhat approach, when a chain is sampling the posterior distribution correctly?
+
+#### 9E6. Sketch a good trace plot for a Markov chain, one that is effectively sampling from the posterior
+distribution. What is good about its shape? Then sketch a trace plot for a malfunctioning Markov
+chain. What about its shape indicates malfunction?
+
+
 ### Medium
 
 #### 9M1
